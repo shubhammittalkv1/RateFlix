@@ -1,0 +1,58 @@
+
+.rate_card_body {
+	padding: 3px 5px;
+	background-color: #fcfaf9;
+	width: 185px;
+}
+.rate_card_title {
+	font-size: 14px;
+	height: 24px;
+	color: #5e5e5e;
+}
+.rate_card_text {
+	font-size: 12px;
+    text-align: left;
+    height: 75px;
+    overflow: hidden;
+    color: #5e5e5e;
+    margin: 5px 0px 5px 0px;
+}
+.rate_card {
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+    width: auto;
+    min-height: 389px;
+    max-height: 389px;
+}
+.rate_card_btn {
+	color: #fcfaf9;
+    background-color: #333333;
+    border-color: #333333;
+    font-size: 14px;
+    width: 100%;
+    padding-left: 5px;
+}
+.rate_card_plus {
+    padding-right: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    vertical-align: top;
+}
+.rate_card_rating {
+	display: block;
+	font-size: 12px;
+	color: #5e5e5e;
+	font-weight: bold;
+}
+.rate_card_voting {
+	display: block;
+	font-size: 10px;
+	color: #5e5e5e;
+}

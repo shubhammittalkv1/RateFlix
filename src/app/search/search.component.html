@@ -1,0 +1,24 @@
+<!-- below code is for Header -->
+<header (searchkeyword)="getSearchData($event)"></header>
+<!-- end of the code of Header -->
+<!-- below code is used to display the Search Data Array -->
+<div class="rate_container">
+  <div class="padding-20-y">
+    <span class="rate_heading font-20">Searched {{whichCate}} for {{keyword}}</span>
+  </div>
+  <!-- for movies -->
+  <div class="rate_card_row" *ngIf="whichCate == 'Movies'">
+    <div class="rate_movie_card_container" >
+      <card class="padding-10" *ngFor="let item of searchData.results" [cardData]="item" [whichCate]="'popularMuvie'"></card>
+    </div>
+  </div>
+  <!-- end of the above code -->
+  <!-- for TV shows -->
+  <div class="rate_card_row" *ngIf="whichCate == 'TV Shows'">
+    <div class="rate_movie_card_container" >
+      <card class="padding-10" *ngFor="let item of searchData.results" [cardData]="item" [whichCate]="'popularTvShow'"></card>
+    </div>
+  </div>
+  <!-- end of the above code  -->
+</div>
+<!-- end of the above code -->

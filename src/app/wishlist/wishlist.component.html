@@ -1,0 +1,37 @@
+<!-- below code is for Header -->
+<header></header>
+<!-- end of the code of Header -->
+<!-- below code is for popular Movies and TV Shows -->
+<div class="rate_container">
+  <div class="padding-10-y" *ngIf="movieWishList != undefined && movieWishList.length !=0">
+    <span class="rate_heading">Movies Added to WishList</span>
+  </div>
+  <div class="rate_card_row" *ngIf="movieWishList != undefined && movieWishList.length !=0">
+    <div class="rate_card_conatiner" >
+      <card class="padding-10-x" *ngFor="let item of movieWishList" [cardData]="item" [whichCate]="'popularMuvie'"></card>
+    </div>
+  </div>
+  <div class="padding-10-y" *ngIf="movieWishList.length == 0 && tvshowWishList != undefined && tvshowWishList.length !=0">
+  	<span>No Movie is Added to Wish List</span>
+  </div>
+  <div class="padding-10-y margin-10-y" *ngIf="tvshowWishList != undefined && tvshowWishList.length !=0">
+    <span class="rate_heading">TV Shows Added to WishList</span>
+  </div>
+  <div class="rate_card_row" *ngIf="tvshowWishList != undefined && tvshowWishList.length !=0">
+    <div class="rate_card_conatiner" >
+      <card class="padding-10-x" *ngFor="let item of tvshowWishList" [cardData]="item" [whichCate]="'popularTvShow'"></card>
+    </div>
+  </div>
+  <div class="padding-10-y" *ngIf="tvshowWishList.length == 0 && movieWishList != undefined && movieWishList.length !=0">
+  	<span>No TV Show is Added to Wish List</span>
+  </div>
+  <div class="center-aligned padding-20-y" *ngIf="tvshowWishList != undefined && tvshowWishList.length == 0 && movieWishList != undefined && movieWishList.length == 0">
+  	<span>Your Wish List is Empty</span>
+  </div>
+</div>
+<!-- End of the above code -->
+<!-- below code is for footer -->
+<!-- Footer -->
+<footer *ngIf="!(tvshowWishList != undefined && tvshowWishList.length == 0 && movieWishList != undefined && movieWishList.length == 0)"></footer>
+  <!-- Footer -->
+<!-- end of above code -->

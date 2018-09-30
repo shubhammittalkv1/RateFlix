@@ -1,0 +1,19 @@
+<!-- below code is for header -->
+<header></header>
+<!-- end of above code -->
+<!-- below code is used to display the Popular TV shows -->
+<div class="rate_container">
+  <div class="padding-20-y">
+    <span class="rate_heading font-20">Top Rated Tv Shows</span>
+  </div>
+  <div class="rate_card_row" *ngIf="popularTvShowData != undefined">
+    <div class="rate_movie_card_container" >
+      <card class="padding-10" *ngFor="let item of popularTvShowData.results" [cardData]="item" [whichCate]="'popularTvShow'"></card>
+    </div>
+  </div>
+</div>
+<!-- End of the above code -->
+<!-- Footer -->
+<footer></footer>
+  <!-- Footer -->
+<!-- end of above code -->

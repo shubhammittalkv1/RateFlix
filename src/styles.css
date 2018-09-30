@@ -1,1 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #202124;
+    color : #e5e5e5;
+}
+
+/*helper classes*/
+.no-padding {
+	padding: 0px;
+}
+.padding-5 {
+	padding: 5px;
+}
+.padding-10 {
+	padding: 10px;
+}
+.padding-20 {
+	padding: 20px;
+}
+.padding-30 {
+	padding: 30px;
+}
+.padding-5-y {
+	padding: 5px 0px ;
+}
+.padding-10-y {
+	padding: 10px 0px ;
+}
+.padding-20-y {
+	padding: 20px 0px ;
+}
+.padding-5-x {
+	padding: 0px 5px;
+}
+.padding-10-x {
+	padding: 0px 10px;
+}
+.padding-20-x {
+	padding: 0px 20px;
+}
+.padding-top-5 {
+	padding: 5px 0px 0px 0px;
+}
+.no-margin {
+	margin: 0px;
+}
+.margin-10 {
+	margin: 10px;
+}
+.margin-5-y {
+	margin: 5px 0px ;
+}
+.margin-10-y {
+	margin: 10px 0px ;
+}
+.margin-20-y {
+	margin: 20px 0px ;
+}
+.margin-5-x {
+	margin: 0px 5px;
+}
+.margin-10-x {
+	margin: 0px 10px;
+}
+.margin-20-x {
+	margin: 0px 20px;
+}
+.right-aligned {
+	text-align: right;
+}
+.center-aligned {
+	text-align: center;
+}
+.rate_table {
+	display: table;
+}
+.rate_table_cell {
+	display: table-cell;
+}
+.font-20 {
+	font-size: 20px !important;
+}
+/*end of helper classes*/
+.rate_container {
+	width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.rate_card_row {
+	width: 100%;
+	overflow-x : auto; 
+}
+.rate_heading {
+	font-size: 16px;
+	color: #e5e5e5;
+	margin: 10px 0px;
+}
+.rate_card_conatiner {
+	display: -webkit-inline-flex; /* Safari */
+  	display: inline-flex;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap; /* Safari */
+  	flex-wrap: nowrap;
+  	-webkit-justify-content: flex-end; /* Safari */
+  	justify-content: flex-end;
+  	-webkit-justify-content: space-around; /* Safari */
+  	justify-content: space-around;
+}
+.rate_movie_card_container {
+	display: flex;
+  	flex-wrap: wrap;
+}
+

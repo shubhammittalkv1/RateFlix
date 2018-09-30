@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand nav_pointer" (click)="changeRoute('home')" routerLink="/home">RateFlix</a>
+    <ul class="navbar-nav mx-4 mt-2 mt-lg-0" style="margin-right:35% !important">
+      <li class="nav-item" [ngClass]="{ 'active' : currentUrl == 'home'}">
+        <a class="nav-link nav_pointer" (click)="changeRoute('home')">Home</a>
+      </li>
+      <li class="nav-item" [ngClass]="{ 'active' : currentUrl == 'movies'}">
+        <a class="nav-link nav_pointer" (click)="changeRoute('movies')">Movies</a>
+      </li>
+      <li class="nav-item" [ngClass]="{ 'active' : currentUrl == 'tvshows'}">
+        <a class="nav-link nav_pointer" (click)="changeRoute('tvshows')">TV Shows</a>
+      </li>
+      <li class="nav-item" [ngClass]="{ 'active' : currentUrl == 'wishlist'}">
+        <a class="nav-link nav_pointer" (click)="changeRoute('wishlist')">Wish List</a>
+      </li>
+    </ul>
+    <form class="form-inline my-3 my-lg-0">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchParameter.keyword" [ngModelOptions]="{standalone: true}">
+      <select class="form-control mx-2" placeholder="Select" [(ngModel)]="searchParameter.whichCate" [ngModelOptions]="{standalone: true}">
+        <option value="Movies">Movie</option>
+        <option value="TV Shows">TV Shows</option>
+      </select>
+      <button class="btn btn-outline-light my-4 my-sm-0" (click)="searchWithKeyword(searchParameter)">
+        Search</button>
+    </form>
+  </div>
+</nav>

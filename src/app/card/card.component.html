@@ -1,0 +1,29 @@
+<div class="rate_card">
+	<img class="card-img-top" src="https://image.tmdb.org/t/p/w185/{{cardData.poster_path}}" alt="Card image cap" height="190" *ngIf="cardData.poster_path != null">
+	<img class="card-img-top" src="https://dummyimage.com/185x190/000/ffffff&text=No+Image" alt="Card image cap" height="190" *ngIf="cardData.poster_path == null">
+	<div class="rate_card_body">
+	   	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+	   		<h5 class="rate_card_title"><span *ngIf="whichCate == 'popularMuvie'">{{cardData.title}}</span><span *ngIf="whichCate == 'popularTvShow'">{{cardData.original_name}}</span></h5>
+	   	</div>
+	   	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-5 rate_table">
+	   		<div class="rate_table_cell no-padding">
+	   			<span class="rate_card_rating">{{cardData.vote_average}} /10 <span style="font-weight: 300 !important"> ({{cardData.vote_count}})</span></span>
+	   		</div>
+	   		<div class="no-padding rate_table_cell right-aligned">
+	   			<span class="rate_card_rating"> 
+	   				<span *ngIf="whichCate == 'popularMuvie'">{{cardData.release_date}}</span><span *ngIf="whichCate == 'popularTvShow'">{{cardData.first_air_date}}</span>
+	   				</span>
+	   		</div>
+	   	</div>
+	   	<p class="rate_card_text">{{cardData.overview}}</p>
+	   	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rate_table no-padding">
+	   		<div class="rate_table_cell padding-5-x">
+	   			<span class="btn rate_card_btn" (click)="pushDataWishList(cardData,whichCate)"><span class="rate_card_plus">+</span>Wishlist</span>
+	   		</div>
+	   		<div class="rate_table_cell padding-5-x">
+	   			<span class="btn rate_card_btn"><i class="fa fa-plus" aria-hidden="true"></i>Details</span>
+	   		</div>
+	   	</div>
+
+	</div>
+</div>

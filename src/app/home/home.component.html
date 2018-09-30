@@ -1,0 +1,43 @@
+<!-- below code is for Header -->
+<header></header>
+<!-- end of the code of Header -->
+<!-- below code is for showing baner -->
+<baner></baner>
+<!-- end of the above code -->
+<!-- below code is for popular Movies and TV Shows -->
+<div class="rate_container" *ngIf="isDisplayingSearchData == false">
+  <div class="padding-10-y">
+    <span class="rate_heading">Popular Movies</span>
+  </div>
+  <div class="rate_card_row" *ngIf="popularMuvieData != undefined">
+    <div class="rate_card_conatiner" >
+      <card class="padding-10-x" *ngFor="let item of popularMuvieData.results" [cardData]="item" [whichCate]="'popularMuvie'"></card>
+    </div>
+  </div>
+  <div class="padding-10-y margin-10-y">
+    <span class="rate_heading">Popular TV Shows</span>
+  </div>
+  <div class="rate_card_row" *ngIf="popularTvShowData != undefined">
+    <div class="rate_card_conatiner" >
+      <card class="padding-10-x" *ngFor="let item of popularTvShowData.results" [cardData]="item" [whichCate]="'popularTvShow'"></card>
+    </div>
+  </div>
+</div>
+<!-- End of the above code -->
+<!-- below code is used to display the Search Data -->
+<div class="rate_container" *ngIf="isDisplayingSearchData == true">
+  <div class="padding-10-y">
+    <span class="rate_heading">Searched Results</span>
+  </div>
+  <div class="rate_card_row" *ngIf="popularMuvieData != undefined">
+    <div class="rate_card_conatiner" >
+      <card class="padding-10-x" *ngFor="let item of popularMuvieData.results" [cardData]="item" [whichCate]="'popularMuvie'"></card>
+    </div>
+  </div>
+</div>
+<!-- end of above code -->
+<!-- below code is for footer -->
+<!-- Footer -->
+<footer></footer>
+  <!-- Footer -->
+<!-- end of above code -->
