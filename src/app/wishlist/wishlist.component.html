@@ -7,7 +7,7 @@
     <span class="rate_heading">Movies Added to WishList</span>
   </div>
   <div class="rate_card_row" *ngIf="movieWishList != undefined && movieWishList.length !=0">
-    <div class="rate_card_conatiner" >
+    <div class="rate_movie_card_container" >
       <card class="padding-10-x" *ngFor="let item of movieWishList" [cardData]="item" [whichCate]="'popularMuvie'"></card>
     </div>
   </div>
@@ -18,7 +18,7 @@
     <span class="rate_heading">TV Shows Added to WishList</span>
   </div>
   <div class="rate_card_row" *ngIf="tvshowWishList != undefined && tvshowWishList.length !=0">
-    <div class="rate_card_conatiner" >
+    <div class="rate_movie_card_container" >
       <card class="padding-10-x" *ngFor="let item of tvshowWishList" [cardData]="item" [whichCate]="'popularTvShow'"></card>
     </div>
   </div>
