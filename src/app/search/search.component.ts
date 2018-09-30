@@ -23,8 +23,7 @@ export class SearchComponent implements OnInit {
   		this.whichCate = data.whichCate;
   	}
   	getSearchDataInit = function(value){
-  		console.log(value);
-      	if(value.keyword != null && value.keyword != ''){
+  			if(value.keyword != null && value.keyword != ''){
         	if(value.whichCate == 'Movies'){
           	let apiUrlMovie = " https://api.themoviedb.org/3/search/movie?api_key=c19abc41a4c70dde414361549db1315c&query="+ value.keyword +"&page=1";
           	this.rest.getData(apiUrlMovie).subscribe((data: {}) => {
@@ -44,7 +43,6 @@ export class SearchComponent implements OnInit {
         }
       } else {
         alert("Keyword Field can't be Empty");
-        // this.searchkeyword.emit(data);
       }
 		console.log("In the Search With Keyword Method");
   	}

@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
 	      	for(var i=0;i<this.popularMuvieData.results.length;i++){
 	      		this.popularMuvieData.results[i].release_date = this.popularMuvieData.results[i].release_date.slice(0,4);
 	      	}
-	    	console.log(this.popularMuvieData);
 	    });
   	}
   	// end of the above code
@@ -36,14 +35,12 @@ export class HomeComponent implements OnInit {
 	      		this.popularTvShowData.results[i].first_air_date = this.popularTvShowData.results[i].first_air_date.slice(0,4);
 	      	}
 	      	
-	    	console.log(this.popularTvShowData);
 	    });
   	}
   	// end of the above code
   	// below function is used to get the search data from Child component
   	getSearchData = function(data){
   		
-  		console.log("Data Comming from Child Component", data);
   		this.searchData = data;
   		if(this.searchData.total_results != 0){
   			this.isDisplayingSearchData = true;

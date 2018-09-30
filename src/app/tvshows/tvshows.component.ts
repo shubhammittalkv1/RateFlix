@@ -22,7 +22,6 @@ export class TvshowsComponent implements OnInit {
 	      		this.popularTvShowData.results[i].first_air_date = this.popularTvShowData.results[i].first_air_date.slice(0,4);
 	      	}
 	      	
-	    	console.log(this.popularTvShowData);
 	    });
   	}
   	// end of the above code

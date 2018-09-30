@@ -19,17 +19,13 @@ export class HeaderComponent implements OnInit {
   @Output() searchkeyword = new EventEmitter();
   // below code is for Search
   	searchWithKeyword = function(value){
-  		console.log(value);
-      if(value.keyword != null && value.keyword != ''){
+  		if(value.keyword != null && value.keyword != ''){
         if(value.whichCate == 'Movies'){
           let apiUrlMovie = " https://api.themoviedb.org/3/search/movie?api_key=c19abc41a4c70dde414361549db1315c&query="+ value.keyword +"&page=1";
           this.rest.getData(apiUrlMovie).subscribe((data: {}) => {
-            console.log(data);
-            console.log(value.whichCate, value.keyword);
+            this.data = data;
             this.data.keyword = value.keyword;
             this.data.whichCate = value.whichCate;
-            console.log(this.data.keyword);
-            console.log(this.data.whichCate);
             localStorage.setItem('searchParameter', JSON.stringify(value));
             this.searchkeyword.emit(this.data);
             this.router.navigateByUrl('/rsearch/search');
@@ -37,7 +33,7 @@ export class HeaderComponent implements OnInit {
         } else{
           let apiUrlTvShow = "https://api.themoviedb.org/3/search/tv?api_key=c19abc41a4c70dde414361549db1315c&query= " + value.keyword + "&page=1";
           this.rest.getData(apiUrlTvShow).subscribe((data: {}) => {
-            console.log(data);
+            this.data = data;
             this.data.keyword = value.keyword;
             this.data.whichCate = value.whichCate;
             localStorage.setItem('searchParameter', JSON.stringify(value));
@@ -49,8 +45,7 @@ export class HeaderComponent implements OnInit {
         alert("Keyword Field can't be Empty");
       }
 
-      console.log("In the Search With Keyword Method");
-  	}
+    }
   // end of above code
   // below method is used to change the route
     changeRoute = function(routeValue){

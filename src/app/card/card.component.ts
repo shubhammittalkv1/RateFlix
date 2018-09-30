@@ -14,8 +14,6 @@ export class CardComponent implements OnInit {
 
   	}
   	pushDataWishList = function(dataObj, whichCate){
-  		console.log(dataObj);
-  		console.log(whichCate);
   		if(JSON.parse(localStorage.getItem('movieWishList')) != undefined){
 	      this.movieWishList = JSON.parse(localStorage.getItem('movieWishList'));
 	    } else {
@@ -35,7 +33,6 @@ export class CardComponent implements OnInit {
   			this.tvshowWishList[tvShowListLen] = dataObj;
   			localStorage.setItem('tvshowWishList', JSON.stringify(this.tvshowWishList));
   		}
-  		console.log("In Push Movie Wish List Function");
   	}
   	ngOnInit() {
   		this.movieWishList = [];

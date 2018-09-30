@@ -20,7 +20,6 @@ export class MoviesComponent implements OnInit {
 	      	for(var i=0;i<this.popularMuvieData.results.length;i++){
 	      		this.popularMuvieData.results[i].release_date = this.popularMuvieData.results[i].release_date.slice(0,4);
 	      	}
-	    	console.log(this.popularMuvieData);
 	    });
   	}
   	// end of the above code
