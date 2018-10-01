@@ -55,8 +55,6 @@ export class HomeComponent implements OnInit {
 		this.getPopularTvShowData();
     if(JSON.parse(localStorage.getItem('searchParameter')) != undefined){
       localStorage.removeItem('searchParameter');
-    } else {
-      localStorage.clear();
     }
     
   	}
